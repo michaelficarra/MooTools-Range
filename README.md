@@ -126,9 +126,9 @@ Determines if the end value is included as part of the range in all instance met
 ### nextMethod
 An optional function to use instead of the Class's next method. Allows for some very interesting ranges. Defaults to (begin.next || $lambda($chk(end) ? end : begin)).
 
-	new Range(1,9,{nextMethod:function(){
-		return this+2;
-	}}).toArray().join(',')		// "1,3,5,7,9"
+	new Range(2,250,{nextMethod:function(){
+		return this.pow(1.2).ceil();
+	}}).toArray().join(',')		// "2,3,4,6,9,14,24,46,99,249"
 
 
 Known Issues
