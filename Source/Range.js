@@ -1,3 +1,20 @@
+/*
+---
+description: A class to represent a range of values, inspired by Ruby's Range class.
+license: LGPL
+authors:
+- Michael Ficarra
+requires:
+- core/1.2.4:Core
+- core/1.2.4:Array
+- core/1.2.4:Class
+- core/1.2.4:Class.Extras
+- range/0.1:Number.Comparable
+- range/0.1:String.Comparable
+provides: [Range]
+...
+*/
+
 var Range = new Class({
 	Implements: Options,
 	options: {
@@ -64,3 +81,7 @@ var Range = new Class({
 	},
 	toString: function(){ return '('+this.begin.inspect()+(this.options.inclusive ? '..' : '...')+this.end.inspect()+')'; }
 });
+
+/* Copyright 2010 Michael Ficarra
+This program is distributed under the (very open)
+terms of the GNU Lesser General Public License */

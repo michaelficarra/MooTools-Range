@@ -1,3 +1,15 @@
+/*
+---
+description: Provides comparable mixin methods (next,compare) for the String class.
+license: LGPL
+authors:
+- Michael Ficarra
+requires:
+- core/1.2.4:Core
+provides: [String.Comparable]
+...
+*/
+
 String.special_char_order = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ '.split('');
 String.implement({
 	replaceCharAt: function(at,chr){
@@ -58,3 +70,7 @@ String.implement({
 		return 0;
 	}
 });
+
+/* Copyright 2010 Michael Ficarra
+This program is distributed under the (very open)
+terms of the GNU Lesser General Public License */
