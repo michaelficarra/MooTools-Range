@@ -79,7 +79,7 @@ var Range = new Class({
 			&& range.options.nextMethod.toString() == this.options.nextMethod.toString()
 		);
 	},
-	toString: function(){ return '('+this.begin.inspect()+(this.options.inclusive ? '..' : '...')+this.end.inspect()+')'; }
+	toString: function(){ return '('+this.begin.toString()+(this.options.inclusive ? '..' : '...')+this.end.toString()+')'; }
 });
 
 /* Copyright 2010 Michael Ficarra
